@@ -8,7 +8,7 @@ const courseSchema = new mongoose.Schema(
     price: { type: Number, required: true },
     visibility: { type: Boolean, default: true },
     publishDate: { type: Date, required: true },
-    video: { type: String, required: true },
+    videos: [{ type: String, required: true }], // Changed to an array for multiple videos
     image: { type: String, required: true },
     numberOfLectures: { type: Number, required: true },
     instructorName: { type: String, required: true },

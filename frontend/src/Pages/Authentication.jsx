@@ -56,22 +56,22 @@ function Authentication() {
   const handleLogin = async (e) => {
     e.preventDefault();
     const { email, password } = userData;
-
+  
     if (!email || !password) {
       toast.info("Please fill in all fields");
     } else if (loginType === "admin" || loginType === "instructor") {
       const credentials = predefinedCredentials[loginType];
       if (email === credentials.email && password === credentials.password) {
         toast.success(`${loginType} logged in successfully`);
+        sessionStorage.setItem("role", loginType);
         sessionStorage.setItem("username", loginType);
-        sessionStorage.setItem("userId", loginType);
-
+  
         if (loginType === "admin") {
           navigate("/admin");
         } else if (loginType === "instructor") {
           navigate("/instructor");
         }
-
+  
         setUserData({ username: "", email: "", password: "" });
       } else {
         toast.error("Invalid email or password for " + loginType);
@@ -82,9 +82,10 @@ function Authentication() {
         if (result.status === 200) {
           sessionStorage.setItem("username", result.data.existingUser.username);
           sessionStorage.setItem("token", result.data.token);
+          sessionStorage.setItem("role", "user");
           sessionStorage.setItem("userId", result.data.existingUser._id);
-
-          navigate("/user-dashboard");
+  
+          navigate("/");
           setUserData({ username: "", email: "", password: "" });
         } else {
           toast.warning(result.response.data);
@@ -94,7 +95,6 @@ function Authentication() {
       }
     }
   };
-
   return (
     <Container fluid className="auth-container">
       <Row className="d-flex align-items-center vh-100">

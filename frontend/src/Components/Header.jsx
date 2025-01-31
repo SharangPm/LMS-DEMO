@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Navbar, Nav, Button } from "react-bootstrap";
 import { GraduationCap, TvMinimalPlay } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
+import Chat from "../Pages/Chat";
 
 function Header({ Auth }) {
   const navigate = useNavigate();
@@ -16,7 +17,8 @@ function Header({ Auth }) {
     <Navbar
       expand="lg"
       style={{
-        background: "linear-gradient(90deg,rgb(95, 114, 192),rgb(13, 148, 132), #ff6a62)",
+        background: "linear-gradient(90deg,rgb(80,72,229),rgb(80,72,229), hsl(233, 76.20%, 62.20%))",
+       
         padding: "1rem 0",
         boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
       }}
@@ -123,6 +125,7 @@ function Header({ Auth }) {
                     transition: "transform 0.3s ease",
                   }}
                 />
+                
               </Nav.Link>
             )}
 

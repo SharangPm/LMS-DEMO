@@ -1,0 +1,106 @@
+/* ViewCourse.css */
+body {
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  h2, h5 {
+    font-weight: 600;
+  }
+  
+  .card-body {
+    padding: 1.5rem;
+  }
+  
+  .card-header {
+    padding: 1rem;
+  }
+  
+  .card {
+    border-radius: 1rem;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    font-weight: bold;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+  }
+  
+  .accordion-button {
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+  
+  .accordion-body {
+    padding: 1.5rem;
+  }
+  
+  @media (max-width: 767px) {
+    .card-body {
+      padding: 1rem;
+    }
+  
+    .btn-primary {
+      font-size: 1.2rem;
+    }
+  
+    .accordion-button {
+      font-size: 1rem;
+    }
+  }
+
+  :root {
+    --primary: rgb(80, 72, 229);
+    --secondary: #6366F1;
+    --accent: rgb(16, 185, 129);
+  }
+  
+  .header-blur {
+    background: rgba(255, 255, 255, 0.85) !important;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .hero-section {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+  }
+  
+  .parallax-bg {
+    background: url('https://www.transparenttextures.com/patterns/cubes.png');
+    opacity: 0.1;
+  }
+  
+  .scale-on-hover {
+    transition: transform 0.3s ease;
+  }
+  
+  .scale-on-hover:hover {
+    transform: scale(1.05);
+  }
+  
+  .social-icon:hover {
+    color: var(--accent) !important;
+  }
+  
+  .hover-primary:hover {
+    color: var(--primary) !important;
+  }
+  
+  .shadow-hover {
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .shadow-hover:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  .glow-effect {
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+    pointer-events: none;
+  }
