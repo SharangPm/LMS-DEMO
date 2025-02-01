@@ -36,6 +36,8 @@ router.post('/register', userController.register);
 
 router.post('/login', userController.login);
 
+router.post('/verify-otp', userController.verifyOTP)
+
 router.get('/user/:id', async (req, res) => {
   try {
     const user = await User.findById(req.params.id).populate('purchasedCourses');
